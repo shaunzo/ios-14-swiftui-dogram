@@ -26,9 +26,7 @@ struct ContentView: View {
                     Text("Browse")
                 }
             
-            NavigationView {
-                UploadView()
-            }
+            UploadView()
                 .tabItem {
                     Image(systemName: "square.and.arrow.up.fill")
                     Text("Upload")
@@ -46,6 +44,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            ContentView()
+        }
     }
 }

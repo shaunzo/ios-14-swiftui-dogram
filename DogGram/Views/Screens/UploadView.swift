@@ -13,6 +13,8 @@ struct UploadView: View {
     @State var imageSelected: UIImage = UIImage(named: "logo")!
     @State var sourceType: UIImagePickerController.SourceType = .camera
     
+    @State var showPostImageView: Bool = false;
+    
     var body: some View {
         ZStack {
             VStack {
@@ -40,8 +42,7 @@ struct UploadView: View {
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .background(Color.MyTheme.yellowColor)
             }
-            // .sheet pops a sheet up in front of the current screen
-            .sheet(isPresented: $showImagePicker, content: {
+            .sheet(isPresented: $showImagePicker, onDismiss: segueToPostImageView, content: {
                 ImagePicker(imageSelected: $imageSelected, sourceType: $sourceType)
             })
             
@@ -50,11 +51,18 @@ struct UploadView: View {
                 .scaledToFit()
                 .frame(width: 100, height: 100, alignment: .center)
                 .shadow(radius: 12)
-                .fullScreenCover(isPresented: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/, content: {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+                .fullScreenCover(isPresented: $showPostImageView, content: {
+                    PostImageView(imageSelected: $imageSelected)
                 })
         }
         .edgesIgnoringSafeArea(.top)
+    }
+    
+    // MARK: FUNCTIONS
+    func segueToPostImageView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            showPostImageView.toggle()
+        }
     }
 }
 

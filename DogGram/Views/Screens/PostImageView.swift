@@ -77,5 +77,7 @@ struct PostImageView_Previews: PreviewProvider {
     
     static var previews: some View {
         PostImageView(imageSelected: $image)
+            .preferredColorScheme(.light)
+            
     }
 }
