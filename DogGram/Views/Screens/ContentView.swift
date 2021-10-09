@@ -32,7 +32,9 @@ struct ContentView: View {
                     Text("Upload")
                 }
             
-            Text("Screen 4")
+            NavigationView {
+                ProfileView(isMyProfile: true, profileDisplayName: "My Profile", profileUserID: "")
+            }
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Profile")
@@ -45,7 +47,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
             ContentView()
         }
     }
