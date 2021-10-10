@@ -9,11 +9,13 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false, content: {
-            Text("Placeholder")
-        })
-        .navigationBarTitle("Settings")
-        .navigationBarTitleDisplayMode(.large)
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false, content: {
+                Text("Placeholder")
+            })
+            .navigationBarTitle("Settings")
+            .navigationBarTitleDisplayMode(.large)
+        }
     }
 }
 
