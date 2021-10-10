@@ -12,7 +12,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
-                GroupBox(label: /*@START_MENU_TOKEN@*/Text("Label")/*@END_MENU_TOKEN@*/, content: {
+                GroupBox(label: SettingsLabelView(labelText: "DogGram", labelImage: "dot.radiowaves.left.and.right"), content: {
                     /*@START_MENU_TOKEN@*/Text("Content")/*@END_MENU_TOKEN@*/
                 })
             })
