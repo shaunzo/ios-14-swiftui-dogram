@@ -13,8 +13,17 @@ struct SettingsView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
                 GroupBox(label: SettingsLabelView(labelText: "DogGram", labelImage: "dot.radiowaves.left.and.right"), content: {
-                    /*@START_MENU_TOKEN@*/Text("Content")/*@END_MENU_TOKEN@*/
+                    HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 10, content: {
+                        Image("logo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80, alignment: .center)
+                            .cornerRadius(12)
+                        Text("DogGram is the #1 app for posting pictures of your dog and sharing them across the world. We are a dog-loving community and we are happy to have you!")
+                            .font(.footnote)
+                    })
                 })
+                .padding()
             })
             .navigationBarTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
