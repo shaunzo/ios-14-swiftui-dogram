@@ -12,7 +12,9 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
-                Text("Placeholder")
+                GroupBox(label: /*@START_MENU_TOKEN@*/Text("Label")/*@END_MENU_TOKEN@*/, content: {
+                    /*@START_MENU_TOKEN@*/Text("Content")/*@END_MENU_TOKEN@*/
+                })
             })
             .navigationBarTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
