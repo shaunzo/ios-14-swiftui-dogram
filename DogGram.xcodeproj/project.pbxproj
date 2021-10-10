@@ -14,6 +14,7 @@
 		9966D70B26E4F39100BB06E0 /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966D70A26E4F39100BB06E0 /* PostImageView.swift */; };
 		99DDC1DB2712F614001E6C0B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDC1DA2712F614001E6C0B /* SettingsView.swift */; };
 		99DDC1DE2712FAAC001E6C0B /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDC1DD2712FAAC001E6C0B /* SettingsLabelView.swift */; };
+		99DDC1E12712FFEA001E6C0B /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDC1E02712FFEA001E6C0B /* SettingsRowView.swift */; };
 		99E6D38026D970EB004CAE26 /* DogGramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6D37F26D970EB004CAE26 /* DogGramApp.swift */; };
 		99E6D38226D970EB004CAE26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6D38126D970EB004CAE26 /* ContentView.swift */; };
 		99E6D38426D970F9004CAE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99E6D38326D970F9004CAE26 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		9966D70A26E4F39100BB06E0 /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		99DDC1DA2712F614001E6C0B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		99DDC1DD2712FAAC001E6C0B /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
+		99DDC1E02712FFEA001E6C0B /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		99E6D37C26D970EA004CAE26 /* DogGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E6D37F26D970EB004CAE26 /* DogGramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogGramApp.swift; sourceTree = "<group>"; };
 		99E6D38126D970EB004CAE26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				9966D70726E3E51700BB06E0 /* ImagePicker.swift */,
 				990496002708B49900E9C528 /* ProfileHeaderView.swift */,
 				99DDC1DD2712FAAC001E6C0B /* SettingsLabelView.swift */,
+				99DDC1E02712FFEA001E6C0B /* SettingsRowView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				99E6D3B926DA7D83004CAE26 /* CarouselView.swift in Sources */,
 				99E6D38026D970EB004CAE26 /* DogGramApp.swift in Sources */,
 				99DDC1DB2712F614001E6C0B /* SettingsView.swift in Sources */,
+				99DDC1E12712FFEA001E6C0B /* SettingsRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
