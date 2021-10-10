@@ -11,6 +11,8 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationView {
+            
+            // MARK: SECTION 1 DOGGRAM
             ScrollView(.vertical, showsIndicators: false, content: {
                 GroupBox(label: SettingsLabelView(labelText: "DogGram", labelImage: "dot.radiowaves.left.and.right"), content: {
                     HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 10, content: {
@@ -22,6 +24,13 @@ struct SettingsView: View {
                         Text("DogGram is the #1 app for posting pictures of your dog and sharing them across the world. We are a dog-loving community and we are happy to have you!")
                             .font(.footnote)
                     })
+                })
+                .padding()
+                
+                // MARK: SECTION 2: PROFILE
+                GroupBox(label: SettingsLabelView(labelText: "Profile", labelImage: "person.fill"), content: {
+                    
+                    /*@START_MENU_TOKEN@*/Text("Content")/*@END_MENU_TOKEN@*/
                 })
                 .padding()
             })
