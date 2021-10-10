@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
@@ -15,6 +16,15 @@ struct SettingsView: View {
             })
             .navigationBarTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
+            .navigationBarItems(leading:
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                     }, label: {
+                        Image(systemName: "xmark")
+                            .font(.title)
+                     })
+                    .accentColor(.primary)
+            )
         }
     }
 }
