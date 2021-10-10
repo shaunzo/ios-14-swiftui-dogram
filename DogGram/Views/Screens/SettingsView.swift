@@ -12,6 +12,8 @@ struct SettingsView: View {
         ScrollView(.vertical, showsIndicators: false, content: {
             Text("Placeholder")
         })
+        .navigationBarTitle("Settings")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
