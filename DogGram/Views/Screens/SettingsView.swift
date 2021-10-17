@@ -15,7 +15,7 @@ struct SettingsView: View {
             // MARK: SECTION 1 DOGGRAM
             ScrollView(.vertical, showsIndicators: false, content: {
                 GroupBox(label: SettingsLabelView(labelText: "DogGram", labelImage: "dot.radiowaves.left.and.right"), content: {
-                    HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 10, content: {
+                    HStack(alignment: .center, spacing: 10, content: {
                         Image("logo")
                             .resizable()
                             .scaledToFit()
@@ -25,7 +25,7 @@ struct SettingsView: View {
                             .font(.footnote)
                     })
                 })
-                .padding()
+                    .padding()
                 
                 // MARK: SECTION 2: PROFILE
                 GroupBox(label: SettingsLabelView(labelText: "Profile", labelImage: "person.fill"), content: {
@@ -35,19 +35,40 @@ struct SettingsView: View {
                     SettingsRowView(leftIcon: "photo", text: "Profile Picture", color: Color.MyTheme.purpleColor)
                     SettingsRowView(leftIcon: "figure.walk", text: "Sign out", color: Color.MyTheme.purpleColor)
                 })
+                    .padding()
+                
+                // MARK: SECTION 3: APPLICATION
+                GroupBox(label: SettingsLabelView(labelText: "Application", labelImage: "apps.iphone"), content: {
+                    SettingsRowView(leftIcon: "folder.fill", text: "Privacy Policy", color: Color.MyTheme.yellowColor)
+                    
+                    SettingsRowView(leftIcon: "folder.fill", text: "Terms and Conditions", color: Color.MyTheme.yellowColor)
+                    
+                    SettingsRowView(leftIcon: "globe", text: "DogGram's website", color: Color.MyTheme.yellowColor)
+                })
+                    .padding()
+                
+                // MARK: SECTION 4: SIGN OFF
+                GroupBox{
+                    Text("DogGram was made with love. \n All Rights Reserved \n Cool Apps Inc. \n Copyright 2020")
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity)
+                }
                 .padding()
+                .padding(.bottom, 80)
+                
             })
-            .navigationBarTitle("Settings")
-            .navigationBarTitleDisplayMode(.large)
-            .navigationBarItems(leading:
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                     }, label: {
-                        Image(systemName: "xmark")
-                            .font(.title)
-                     })
-                    .accentColor(.primary)
-            )
+                .navigationBarTitle("Settings")
+                .navigationBarTitleDisplayMode(.large)
+                .navigationBarItems(leading:
+                                        Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Image(systemName: "xmark")
+                        .font(.title)
+                })
+                                        .accentColor(.primary)
+                )
         }
     }
 }
