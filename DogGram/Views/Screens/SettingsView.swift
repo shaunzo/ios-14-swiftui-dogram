@@ -34,7 +34,13 @@ struct SettingsView: View {
                         SettingsRowView(leftIcon: "pencil", text: "Display Name", color: Color.MyTheme.purpleColor)
                     })
                     
-                    SettingsRowView(leftIcon: "text.quote", text: "Bio", color: Color.MyTheme.purpleColor)
+                    NavigationLink(
+                        destination: SettingsEditTextView(submissionText: "Current Bio here", title: "Bio", description: "Your bio is a great place to let others know a little about you", placeholder: "Your bio here..."),
+                        label: {
+                            SettingsRowView(leftIcon: "text.quote", text: "Bio", color: Color.MyTheme.purpleColor)
+                        }
+                    )
+                    
                     SettingsRowView(leftIcon: "photo", text: "Profile Picture", color: Color.MyTheme.purpleColor)
                     SettingsRowView(leftIcon: "figure.walk", text: "Sign out", color: Color.MyTheme.purpleColor)
                 })
