@@ -10,11 +10,18 @@ import SwiftUI
 struct SettingsEditTextView: View {
     
     @State var submissionText: String = ""
+    @State var title: String
+    @State var description: String
+    @State var placeholder: String
     
     var body: some View {
         VStack{
-            Text("This is the description to tell the user what they are doing on this screen")
-            TextField("Placeholder", text: $submissionText)
+            HStack {
+                Text(description)
+                Spacer(minLength: 0)
+            }
+            
+            TextField(placeholder, text: $submissionText)
                 .padding()
                 .frame(height: 60)
                 .frame(maxWidth: .infinity)
@@ -41,14 +48,14 @@ struct SettingsEditTextView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .navigationBarTitle("Edit Display Name")
+        .navigationBarTitle(title)
     }
 }
 
 struct SettingsEditTextView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SettingsEditTextView()
+            SettingsEditTextView(title: "Test Title", description: "Test Description", placeholder: "Test Placeholder")
         }
     }
 }
