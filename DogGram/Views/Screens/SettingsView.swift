@@ -30,7 +30,7 @@ struct SettingsView: View {
                 // MARK: SECTION 2: PROFILE
                 GroupBox(label: SettingsLabelView(labelText: "Profile", labelImage: "person.fill"), content: {
                     
-                    NavigationLink(destination: Text("Destination"), label: {
+                    NavigationLink(destination: SettingsEditTextView(submissionText: "Current Display Name", title: "Display Name", description: "You can edit your display name here. This will be seen by other users on your profile and on your posts!", placeholder: "Your display name..."), label: {
                         SettingsRowView(leftIcon: "pencil", text: "Display Name", color: Color.MyTheme.purpleColor)
                     })
                     
