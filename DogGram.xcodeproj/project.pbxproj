@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		765D1BBC271C34A6000835CD /* SettingsEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765D1BBB271C34A6000835CD /* SettingsEditTextView.swift */; };
+		76E1837F271E1E680014A3AF /* SettingsEditImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1837E271E1E680014A3AF /* SettingsEditImageView.swift */; };
 		990495FE2708B2DF00E9C528 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990495FD2708B2DF00E9C528 /* ProfileView.swift */; };
 		990496012708B49900E9C528 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990496002708B49900E9C528 /* ProfileHeaderView.swift */; };
 		9966D70526E3CE2B00BB06E0 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966D70426E3CE2B00BB06E0 /* UploadView.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		765D1BBB271C34A6000835CD /* SettingsEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditTextView.swift; sourceTree = "<group>"; };
+		76E1837E271E1E680014A3AF /* SettingsEditImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditImageView.swift; sourceTree = "<group>"; };
 		990495FD2708B2DF00E9C528 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		990496002708B49900E9C528 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		9966D70426E3CE2B00BB06E0 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				990495FD2708B2DF00E9C528 /* ProfileView.swift */,
 				99DDC1DA2712F614001E6C0B /* SettingsView.swift */,
 				765D1BBB271C34A6000835CD /* SettingsEditTextView.swift */,
+				76E1837E271E1E680014A3AF /* SettingsEditImageView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				990495FE2708B2DF00E9C528 /* ProfileView.swift in Sources */,
 				99E6D3B626DA7C6C004CAE26 /* BrowseView.swift in Sources */,
 				99E6D3B326DA372A004CAE26 /* CommentModel.swift in Sources */,
+				76E1837F271E1E680014A3AF /* SettingsEditImageView.swift in Sources */,
 				99E6D3AD26DA2E8E004CAE26 /* CommentsView.swift in Sources */,
 				990496012708B49900E9C528 /* ProfileHeaderView.swift in Sources */,
 				9966D70526E3CE2B00BB06E0 /* UploadView.swift in Sources */,
