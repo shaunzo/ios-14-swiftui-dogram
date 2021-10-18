@@ -35,7 +35,7 @@ struct SettingsView: View {
                     })
                     
                     NavigationLink(
-                        destination: SettingsEditTextView(submissionText: "Current Bio here", title: "Bio", description: "Your bio is a great place to let others know a little about you", placeholder: "Your bio here..."),
+                        destination: SettingsEditTextView(submissionText: "Current Bio here", title: "Bio", description: "Your bio is a great place to let others know a little about you. It will be shown on your profile only", placeholder: "Your bio here..."),
                         label: {
                             SettingsRowView(leftIcon: "text.quote", text: "Bio", color: Color.MyTheme.purpleColor)
                         }
