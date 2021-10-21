@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		765D1BBC271C34A6000835CD /* SettingsEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765D1BBB271C34A6000835CD /* SettingsEditTextView.swift */; };
+		76C353472721A13100808133 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C353462721A13100808133 /* SignUpView.swift */; };
 		76E1837F271E1E680014A3AF /* SettingsEditImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1837E271E1E680014A3AF /* SettingsEditImageView.swift */; };
 		990495FE2708B2DF00E9C528 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990495FD2708B2DF00E9C528 /* ProfileView.swift */; };
 		990496012708B49900E9C528 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990496002708B49900E9C528 /* ProfileHeaderView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		765D1BBB271C34A6000835CD /* SettingsEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditTextView.swift; sourceTree = "<group>"; };
+		76C353462721A13100808133 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		76E1837E271E1E680014A3AF /* SettingsEditImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditImageView.swift; sourceTree = "<group>"; };
 		990495FD2708B2DF00E9C528 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		990496002708B49900E9C528 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				99DDC1DA2712F614001E6C0B /* SettingsView.swift */,
 				765D1BBB271C34A6000835CD /* SettingsEditTextView.swift */,
 				76E1837E271E1E680014A3AF /* SettingsEditImageView.swift */,
+				76C353462721A13100808133 /* SignUpView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				99E6D3A626DA22B7004CAE26 /* PostModel.swift in Sources */,
 				99DDC1DE2712FAAC001E6C0B /* SettingsLabelView.swift in Sources */,
 				9966D70B26E4F39100BB06E0 /* PostImageView.swift in Sources */,
+				76C353472721A13100808133 /* SignUpView.swift in Sources */,
 				99E6D38226D970EB004CAE26 /* ContentView.swift in Sources */,
 				99E6D3B026DA32FB004CAE26 /* MessageView.swift in Sources */,
 				99E6D39A26D98337004CAE26 /* Extensions.swift in Sources */,
