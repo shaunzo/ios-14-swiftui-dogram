@@ -10,6 +10,7 @@
 		765D1BBC271C34A6000835CD /* SettingsEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765D1BBB271C34A6000835CD /* SettingsEditTextView.swift */; };
 		767F92C92722A16D009D85F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F92C82722A16D009D85F1 /* OnboardingView.swift */; };
 		767F92CB2722A419009D85F1 /* SignInWithAppleButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F92CA2722A419009D85F1 /* SignInWithAppleButtonCustom.swift */; };
+		767F92CD2722A79C009D85F1 /* OnboardingViewPart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F92CC2722A79C009D85F1 /* OnboardingViewPart2.swift */; };
 		76C353472721A13100808133 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C353462721A13100808133 /* SignUpView.swift */; };
 		76E1837F271E1E680014A3AF /* SettingsEditImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1837E271E1E680014A3AF /* SettingsEditImageView.swift */; };
 		990495FE2708B2DF00E9C528 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990495FD2708B2DF00E9C528 /* ProfileView.swift */; };
@@ -42,6 +43,7 @@
 		765D1BBB271C34A6000835CD /* SettingsEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditTextView.swift; sourceTree = "<group>"; };
 		767F92C82722A16D009D85F1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		767F92CA2722A419009D85F1 /* SignInWithAppleButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonCustom.swift; sourceTree = "<group>"; };
+		767F92CC2722A79C009D85F1 /* OnboardingViewPart2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPart2.swift; sourceTree = "<group>"; };
 		76C353462721A13100808133 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		76E1837E271E1E680014A3AF /* SettingsEditImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditImageView.swift; sourceTree = "<group>"; };
 		990495FD2708B2DF00E9C528 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				76E1837E271E1E680014A3AF /* SettingsEditImageView.swift */,
 				76C353462721A13100808133 /* SignUpView.swift */,
 				767F92C82722A16D009D85F1 /* OnboardingView.swift */,
+				767F92CC2722A79C009D85F1 /* OnboardingViewPart2.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				99E6D38026D970EB004CAE26 /* DogGramApp.swift in Sources */,
 				99DDC1DB2712F614001E6C0B /* SettingsView.swift in Sources */,
 				765D1BBC271C34A6000835CD /* SettingsEditTextView.swift in Sources */,
+				767F92CD2722A79C009D85F1 /* OnboardingViewPart2.swift in Sources */,
 				99DDC1E12712FFEA001E6C0B /* SettingsRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
