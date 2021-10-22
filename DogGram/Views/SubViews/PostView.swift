@@ -11,6 +11,8 @@ struct PostView: View {
     
     @State var post: PostModel
     @State var showHeaderandFooter: Bool
+    @State var animateLike: Bool = false
+    @State var addHeartAnimationToView: Bool
     
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 0, content: {
@@ -45,15 +47,38 @@ struct PostView: View {
             
             // MARK: IMAGE
             
-            Image("dog1")
-                .resizable()
-                .scaledToFit()
+            ZStack {
+                Image("dog1")
+                    .resizable()
+                    .scaledToFit()
+                
+                if addHeartAnimationToView {
+                    LikeAnimationView(animate: $animateLike)
+                }
+                
+            }
+            
             
             // MARK: FOOTER
             if showHeaderandFooter {
                 HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20, content: {
-                    Image(systemName: "heart")
-                        .font(.title3)
+                    
+                    Button(
+                        action: {
+                            if post.likedByUser {
+                                // Unlike post
+                                unlikePost()
+                            } else {
+                                // like post
+                                likePost()
+                            }
+                        },
+                        label: {
+                            Image(systemName: post.likedByUser ? "heart.fill" : "heart")
+                                .font(.title3)
+                        }
+                    )
+                    .accentColor(post.likedByUser ? .red : .primary)
                     
                     // MARK: COMMENT ICON
                     NavigationLink(
@@ -81,13 +106,50 @@ struct PostView: View {
             }
         })
     }
+    
+    // MARK: FUNCTIONS
+    func likePost() {
+        let updatedPost = PostModel(
+            postID: post.postID,
+            userID: post.userID,
+            username: post.username,
+            caption: post.caption,
+            dateCreated: post.dateCreated,
+            likeCount: post.likeCount + 1,
+            likedByUser: true)
+        
+        self.post = updatedPost
+        
+        animateLike = true
+        
+        // This will delay teh next line of code by 0.5s
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            animateLike = false
+        }
+    }
+    
+    func unlikePost() {
+        let updatedPost = PostModel(
+            postID: post.postID,
+            userID: post.userID,
+            username: post.username,
+            caption: post.caption,
+            dateCreated: post.dateCreated,
+            likeCount: post.likeCount - 1,
+            likedByUser: false)
+        
+        self.post = updatedPost
+    }
 }
 
 struct PostView_Previews: PreviewProvider {
     static var post: PostModel = PostModel(postID: "", userID: "", username: "Joe Green", caption: "This is a test caption", dateCreated: Date(), likeCount: 0, likedByUser: false)
     
     static var previews: some View {
-        PostView(post: post, showHeaderandFooter: true)
-            .previewLayout(.sizeThatFits)
+        PostView(
+            post: post,
+            showHeaderandFooter: true,
+            addHeartAnimationToView: true)
+        .previewLayout(.sizeThatFits)
     }
 }
