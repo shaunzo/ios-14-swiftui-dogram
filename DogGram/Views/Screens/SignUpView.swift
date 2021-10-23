@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @Environment(\.colorScheme) var colorScheme
     
     @State var showOnBoardng: Bool = false
     
@@ -32,6 +33,7 @@ struct SignUpView: View {
                 .font(.headline)
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
+                .foregroundColor(colorScheme == .light ? .primary : Color.MyTheme.purpleColor)
             
             Button(
                 action: {
@@ -69,5 +71,6 @@ struct SignUpView: View {
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
+            .preferredColorScheme(.light)
     }
 }
