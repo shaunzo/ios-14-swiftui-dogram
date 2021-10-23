@@ -15,6 +15,7 @@ struct PostView: View {
     @State var addHeartAnimationToView: Bool
     @State var showActionSheet: Bool = false
     @State var actionSheetType: PostActionSheetOption = .general
+    @State var postImage: UIImage = UIImage(named: "dog1")!
     
     enum PostActionSheetOption {
         case general
@@ -63,7 +64,7 @@ struct PostView: View {
             // MARK: IMAGE
             
             ZStack {
-                Image("dog1")
+                Image(uiImage: postImage)
                     .resizable()
                     .scaledToFit()
                 
@@ -103,8 +104,14 @@ struct PostView: View {
                                 .font(.title3)
                                 .foregroundColor(.primary)
                         })
-                    Image(systemName: "paperplane")
-                        .font(.title3)
+                    
+                    Button(action: {
+                        sharePost()
+                    }, label: {
+                        Image(systemName: "paperplane")
+                            .font(.title3)
+                    })
+                    .accentColor(.primary)
                     
                     Spacer()
                 })
@@ -203,6 +210,21 @@ struct PostView: View {
     
     func reportPost(reason: String) {
         print("REPORT POST!")
+    }
+    
+    func sharePost() {
+        
+        let message = "Check out this post on DogGram!"
+        let image = postImage
+        let link = URL(string: "https://www.google.com")!
+        let activityViewController = UIActivityViewController(activityItems: [message, image, link], applicationActivities: nil)
+        
+        let viewController = UIApplication.shared.windows.first?.rootViewController
+        
+        viewController?.present(
+            activityViewController,
+            animated: true,
+            completion: nil)
     }
 }
 
