@@ -13,6 +13,13 @@ struct PostView: View {
     @State var showHeaderandFooter: Bool
     @State var animateLike: Bool = false
     @State var addHeartAnimationToView: Bool
+    @State var showActionSheet: Bool = false
+    @State var actionSheetType: PostActionSheetOption = .general
+    
+    enum PostActionSheetOption {
+        case general
+        case report
+    }
     
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 0, content: {
@@ -39,8 +46,16 @@ struct PostView: View {
                     
                     Spacer()
                     
-                    Image(systemName: "ellipsis")
-                        .font(.headline)
+                    Button( action: {
+                        showActionSheet.toggle()
+                        }, label: {
+                            Image(systemName: "ellipsis")
+                                .font(.headline)
+                        })
+                        .accentColor(.primary)
+                        .actionSheet(isPresented: $showActionSheet, content: {
+                            getActionSheet()
+                        })
                 }
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 6)
             }
@@ -139,6 +154,55 @@ struct PostView: View {
             likedByUser: false)
         
         self.post = updatedPost
+    }
+    
+    func getActionSheet() -> ActionSheet {
+        
+        switch self.actionSheetType {
+        case .general:
+            return ActionSheet(
+                title: Text("What would you like to do?"),
+                message: nil,
+                buttons: [
+                    .destructive(Text("Report"), action: {
+                        self.actionSheetType = .report
+                        
+                        DispatchQueue.main.asyncAfter(
+                            deadline: .now() + 0.5) {
+                                self.showActionSheet.toggle()
+                            }
+                    }),
+                    .default(Text("Learn more"), action: {
+                        print("LEARN MORE PRESSED!")
+                    }),
+                    .cancel()
+                ])
+        case .report:
+            return ActionSheet(
+                title: Text("Why are you reporting this post?"),
+                message: nil,
+                buttons: [
+                    .destructive(Text("This is inappropriate"), action: {
+                        reportPost(reason: "This is inappropriate")
+                    }),
+                    
+                    .destructive(Text("This is spam"), action: {
+                        reportPost(reason: "This is spam")
+                    }),
+                    
+                    .destructive(Text("It made me uncomfortable"), action: {
+                        reportPost(reason: "It made me uncomfortable")
+                    }),
+                    
+                    .cancel({
+                        self.actionSheetType = .general
+                    })
+                ])
+        }
+    }
+    
+    func reportPost(reason: String) {
+        print("REPORT POST!")
     }
 }
 
